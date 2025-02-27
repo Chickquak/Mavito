@@ -1,0 +1,130 @@
+/* Diseño de la pagina de alebrijes de Montserrat Almodovar Ruvalcaba */
+@font-face {
+  font-family: Mexicana;
+  src: url(Mexicana.ttf);
+}
+
+.header {
+    /*background-color: #F1F1F1;
+    opacity: 0.5;*/
+    text-align: center;
+
+  }
+  
+  body {
+    background-image: url("images/0c5284f6ef47b45550e94726a733b90e.jpg");    
+    background-repeat: no-repeat;  
+    background-attachment: fixed;
+    background-size: cover;
+  }
+  h1 {
+    color: #0E1B2B;
+    font-family: verdana;
+    font-size: 300%;
+  }
+  h2 {
+    color: #0d1b2a;
+    font-family: verdana;
+    font-size: 150%;
+  }
+  p.italic {
+    font-style: italic;
+  }
+  p.small {
+    line-height: 0.08;
+  }
+  p {
+    font-family: Helvetica;
+    /*font-size: 160%;*/
+    text-align: justify;
+  }
+  div.page {
+    border-radius: 10px;
+    border: 3px solid #772e25;
+    padding: 25px 50px 75px;
+    width:60%;
+    margin:auto;
+    background-color: #fcf3cd;
+  }
+  
+  .img1 {
+    float: right;
+    padding: 5px;
+  }
+
+  .img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+  }
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  /*Style the footer*/
+  footer {
+      background-color: #050620;
+      text-align: center;
+      font-family: verdana;
+      padding: 20px 0;
+      font-size: 15px; /* Tamaño de la letra en el footer */
+      color: white;
+  }
+  
+  * {
+    box-sizing: border-box;
+  } 
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #0E1B2B;
+    font-family: Helvetica;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #111;
+  }
+  .active {
+    background-color: #1D8DC6;
+  }
+  
+  /* Create two columns/boxes that floats next to each other */
+  nav {
+    float: left;
+    width: 20%;
+   
+    padding: 20px;
+  }
+  
+  /* Style the list inside the menu */
+  nav ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  
+ 
+  
+  .link {
+    font-size: 90%;
+  }
+  .spacebar {
+    padding: 40px;
+  }

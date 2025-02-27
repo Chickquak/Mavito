@@ -1,0 +1,15 @@
+<html>
+<head>
+<script languaje="javascript">
+var cadena1="\tHola mundo";
+var cadena2="\nque tal te va";
+//definición de variables
+document.write("mi nombre es Lotzy");
+alert(cadena1);//función que permite que salga un cuadro de dialogo con un                          
+                     //botón
+alert(cadena2);
+</script>
+</head>
+<body>
+</body>
+</html>
