@@ -4,19 +4,26 @@
   src: url(Mexicana.ttf);
 }
 
+body {
+  background-color: #60CAE0;
+}
 .header {
-    /*background-color: #F1F1F1;
-    opacity: 0.5;*/
-    text-align: center;
-
-  }
+  background-image: url('IMG_2826.JPG');
+  background-repeat: no-repeat;
+  background-attachment: fixed;   
+  background-size: cover;
+  text-align: center;
+  padding: 20px;
+  color: white;
+}
+.header p {
+  font-family: Mexicana; font-size: 5rem; color: #0E1B2B; 
+  justify-content: center; background-color: #9b61f3;
+  border-radius: 10px;
+    border: 3px solid #0E1B2B;
+    padding: 15px; display: inline-block; 
   
-  body {
-    background-image: url("images/0c5284f6ef47b45550e94726a733b90e.jpg");    
-    background-repeat: no-repeat;  
-    background-attachment: fixed;
-    background-size: cover;
-  }
+}
   h1 {
     color: #0E1B2B;
     font-family: verdana;
@@ -107,21 +114,11 @@
   
   /* Create two columns/boxes that floats next to each other */
   nav {
-    float: left;
-    width: 20%;
-   
-    padding: 20px;
-  }
-  
-  /* Style the list inside the menu */
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  
-  
- 
-  
+    display: grid;
+    place-items: center;
+    background-color: #0E1B2B;
+}
+
   .link {
     font-size: 90%;
   }
