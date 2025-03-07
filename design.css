@@ -8,7 +8,7 @@ body {
   background-color: #60CAE0;
 }
 .header {
-  background-image: url("IMG_2826.JPG");
+  background-image: url('IMG_2826.JPG');
   background-repeat: no-repeat;
   background-attachment: fixed;   
   background-size: cover;
@@ -79,6 +79,9 @@ body {
       font-size: 15px; /* Tamaño de la letra en el footer */
       color: white;
   }
+  .container {
+    text-align: center;  /* This will center inline elements */
+}
   
   * {
     box-sizing: border-box;
