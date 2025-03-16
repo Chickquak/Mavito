@@ -7,88 +7,81 @@
   <link rel="icon" type="image/png" href="Mavito azulito icon.png">
   <style type="text/css">
   @import url("design.css");
-  /* Position the image container (needed to position the left and right arrows) */
-.container {
-  position: relative;
+
+  .gallery-container {
+  display: grid;
+  grid-template-columns: 7% 10%;
+  grid-template-rows: repeat(10, minmax(3rem, 8rem));
+  gap: 5px;
+  margin: 0 auto;
+  border-radius: 6px;
+  border: 3px solid #293e43;
+  padding: 5px;
+  width:90%;
 }
 
-/* Hide the images by default */
-.mySlides {
-  display: none;
+.gallery-item {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: #1e1f26;
+  border-radius: 6px;
 }
 
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
+.one {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
 }
 
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
+.two {
+  grid-column: 2 / 5;
+  grid-row: 1 / 3;
 }
 
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
+.three {
+  grid-column: 5;
+  grid-row: 1 / 3;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
+.four {
+  grid-column: 6;
+  grid-row: 1 / 3;
 }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
+.five {
+  grid-column: 8 / 10;
+  grid-row: 1 / 3;
 }
 
-/* Container for image text */
-.caption-container {
-  text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
+.six {
+  grid-column: 1 / 4;
+  grid-row: 3 / 5;
 }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
+.seven {
+  grid-column: 4;
+  grid-row: 3 / 5;
 }
 
-/* Six columns side by side */
-.column {
-  float: left;
-  width: 16.66%;
+.eight {
+  grid-column: 5;
+  grid-row: 3 / 5;
 }
 
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.6;
+.nine {
+  grid-column: 6 / 10;
+  grid-row: 3 / 5;
 }
 
-.active,
-.demo:hover {
-  opacity: 1;
+.gallery-item img {
+  display: block;
+  border-radius: 5px;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
 }
+
   </style>
 
   </head>
@@ -104,112 +97,61 @@
     <li><a href="proyecto.html" >Sobre el Proyecto</a></li> 
   </ul></nav>
 
-<div class="spacebar"></div>
-<div class="page">
-
-  <p>Galería destacada</p>
+  <h1 style="text-align: center;">Galería destacada</h1>
   <!-- Container for the image gallery -->
-  <div class="container">
+  <div class="gallery-container">
   
     <!-- Full-width images with number text -->
-    <div class="mySlides">
-      <div class="numbertext">1 / 6</div>
+    <div class="gallery-item one">
         <img src="images/2022-ALEBRIJES__FocusFillWyIwLjAwIiwiMC4wMCIsMTIwMCw5MDBd.jpg" style="width:100%">
     </div>
   
-    <div class="mySlides">
-      <div class="numbertext">2 / 6</div>
+    <div class="gallery-item two">
         <img src="images/2022ALEBRIJES04-__FocusFillWyIwLjAwIiwiMC4wMCIsMTIwMCw5MDBd.jpg" style="width:100%">
     </div>
   
-    <div class="mySlides">
-      <div class="numbertext">3 / 6</div>
+    <div class="gallery-item three">
         <img src="images/Alebrijes-Two-Headed-2__FocusFillWyIwLjAwIiwiMC4wMCIsMTIwMCw5MDBd.jpg" style="width:100%">
     </div>
   
-    <div class="mySlides">
-      <div class="numbertext">4 / 6</div>
+    <div class="gallery-item four">
         <img src="images/D_NQ_NP_911850-MLM73711584451_122023-O.webp" style="width:100%">
     </div>
   
-    <div class="mySlides">
-      <div class="numbertext">5 / 6</div>
+    <div class="gallery-item five">
         <img src="images/IMG-1098-4__FocusFillWyIwLjAwIiwiMC4wMCIsMjAwMCw5NTBd.jpg" style="width:100%">
     </div>
   
-    <div class="mySlides">
-      <div class="numbertext">6 / 6</div>
+    <div class="gallery-item six">
         <img src="images/IMG-8175__FocusFillWyIwLjAwIiwiMC4wMCIsMTIwMCw5MDBd.jpg" style="width:100%">
     </div>
-  
-    <!-- Next and previous buttons -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  
-    <!-- Image text -->
-    <div class="caption-container">
-      <p id="caption"></p>
+
+
+  <div class="gallery-item seven">
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5939a140-e582-4b41-a867-b5c4ac20855f/djbt969-4d29e6c6-cc15-4be3-aec4-a1a82648638d.png/v1/fill/w_938,h_654,q_80,strp/chido_mavito_flaming__by_blueberry_chick_djbt969-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjU0IiwicGF0aCI6IlwvZlwvNTkzOWExNDAtZTU4Mi00YjQxLWE4NjctYjVjNGFjMjA4NTVmXC9kamJ0OTY5LTRkMjllNmM2LWNjMTUtNGJlMy1hZWM0LWExYTgyNjQ4NjM4ZC5wbmciLCJ3aWR0aCI6Ijw9OTM4In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.viKuL5W9VllzLZKcPArZcwNfeoVHKs4kUQKs4GG9PzA" alt="">
     </div>
-  
-  
-    <!-- Thumbnail images -->
-    <div class="row">
-      <div class="column">
-        <img class="demo cursor" src="images/2022-ALEBRIJES__FocusFillWyIwLjAwIiwiMC4wMCIsMTIwMCw5MDBd.jpg" style="width:100%" onclick="currentSlide(1)" alt="Old Manga Antoine X Bunnie">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/2022ALEBRIJES04-__FocusFillWyIwLjAwIiwiMC4wMCIsMTIwMCw5MDBd.jpg" style="width:100%" onclick="currentSlide(2)" alt="Roort">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/Alebrijes-Two-Headed-2__FocusFillWyIwLjAwIiwiMC4wMCIsMTIwMCw5MDBd.jpg" style="width:100%" onclick="currentSlide(3)" alt="Adventure Gang">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/D_NQ_NP_911850-MLM73711584451_122023-O.webp" style="width:100%" onclick="currentSlide(4)" alt="SonicSallyOPLA">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/IMG-1098-4__FocusFillWyIwLjAwIiwiMC4wMCIsMjAwMCw5NTBd.jpg" style="width:100%" onclick="currentSlide(5)" alt="Cat Burglar Sally and Sonic D. Hedgehog">
-      </div>
-      <div class="column">
-        <img class="demo cursor" src="images/IMG-8175__FocusFillWyIwLjAwIiwiMC4wMCIsMTIwMCw5MDBd.jpg" style="width:100%" onclick="currentSlide(6)" alt="Sniper Tails and Roronoa Antoine">
-      </div>
+    <div class="gallery-item eight">
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5939a140-e582-4b41-a867-b5c4ac20855f/diost2h-90498fed-8f18-420b-81f5-7b37ffbcb737.png/v1/fit/w_408,h_430,q_70,strp/mavito_lovley_by_blueberry_chick_diost2h-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDMwIiwicGF0aCI6IlwvZlwvNTkzOWExNDAtZTU4Mi00YjQxLWE4NjctYjVjNGFjMjA4NTVmXC9kaW9zdDJoLTkwNDk4ZmVkLThmMTgtNDIwYi04MWY1LTdiMzdmZmJjYjczNy5wbmciLCJ3aWR0aCI6Ijw9NDA4In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.85h-cqPZEJCGR56Eoh2go6zlnOaZAku3ovi4bVbBJ8Y" alt="">
+    </div>
+    <div class="gallery-item nine">
+    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5939a140-e582-4b41-a867-b5c4ac20855f/diosrcs-90f00fb8-03fd-49f2-b210-b5bcc1d79bc5.jpg/v1/fill/w_1149,h_695,q_70,strp/primer_mavito_by_blueberry_chick_diosrcs-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Nzc1IiwicGF0aCI6IlwvZlwvNTkzOWExNDAtZTU4Mi00YjQxLWE4NjctYjVjNGFjMjA4NTVmXC9kaW9zcmNzLTkwZjAwZmI4LTAzZmQtNDlmMi1iMjEwLWI1YmNjMWQ3OWJjNS5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19._LO9_40wHuxQGziS9DtyejJ0oBZ1iJi59xHnqIA3tCo" alt="">
     </div>
   </div>
+    <!-- Image text 
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>-->
   
-</div>
+
+
+
 <div class="spacebar"></div>
 <footer>
     <h3>@2025 Montserrat Almodovar Ruvalcaba</h3>
 </footer>
 
 <script>
-  let slideIndex = 1;
-  showSlides(slideIndex);
-  
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-  
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-  
-  function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("demo");
-    let captionText = document.getElementById("caption");
-    if (n > slides.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";
-    dots[slideIndex-1].className += " active";
-    captionText.innerHTML = dots[slideIndex-1].alt;
-  }
+
   </script>
 
 </body>
