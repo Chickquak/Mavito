@@ -13,6 +13,39 @@
   margin-right: auto;
   width: 60%;
 }
+  button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  background-color: #FF2C72;
+  font-family: Helvetica;
+  border: 0px;
+}
+button:hover {
+    background-color: #111;
+  }
+#crearform {
+  font-family: Helvetica;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border: 2px solid #0c356D;
+  background-color: #245ca3;
+  border-radius: 10px;
+  font-style: bold;
+  color:aliceblue;
+  width: fit-content;
+  padding: 10px;
+}
+input{
+  border-radius: 5px;
+  border: 0px;
+  padding: 8px 10px;
+}
   </style>
   </head>
 <body>
@@ -32,11 +65,49 @@
   <h1 style="text-align: center;">Articulos</h1>
 	<p>Los articulos es donde referenciarán elementos inspirados o basados para el desarrollo de la historia. <br>
   Aqui de debe poder editar solo por el usuario de la pagina. </p>
-  <img src="images/image1.png" height="15%">
+  <br>
+  <button type="button" onclick="createpost()">¡Publicar!</button><br>
+  <!--Poner un Javascript para ocultar
+      Título del artículo
+      Cuerpo del artículo
+      Fecha de publicación
+      Autor del artículo
+      Imagen o fotografía
+      -->
+  <form id="crearform" action="crear.php" method="POST">
+    <label>Titulo*<br>
+    <input id="titulo" type="text" name="titulo" required></label><br><br>
+    <textarea id="descrip" name="descrip" rows="5" cols="40" placeholder="Cuenta lo que quieres decir" ></textarea><br><br>
+    <label>Autor: <input id="nom_autor" type="text" name="nom_autor" value="Montserrat Almodovar Ruvalcaba" style="width: 56%"></label>
+    <br><br>
+    <label>Insertar imagen
+      <!--How to allow <input type="file"> to accept only image files
+      Use the accept attribute of the input tag. To accept only PNG's, JPEG's and GIF's 
+      you can use the following code:-->
+    <input id="imagen" type="file" name="imagen" accept="image/png, image/gif, image/jpeg" /></label>
+    <br><br><br><input type="submit" value="Subir" style="color: azure; background-color: #1D8DC6; padding: 10px;"><br>
+  </form>
+  <br>
+  <button type="button">¡Editar!</button>
+  <br>
+  <button type="button">¡Borrar!</button>
+  <br>
+  <img src="images/image1.png" width="100%">
 </div>
 <div class="spacebar"></div>
 <footer>
     <h3>@2025 Montserrat Almodovar Ruvalcaba</h3>
 </footer>
+<script>
+  //Hide and show an Element 
+  function createpost() {
+  var x = document.getElementById("crearform");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
 </body>
 </html>
