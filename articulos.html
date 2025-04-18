@@ -1,113 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-  <meta charset=“utf-8”>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Articulos</title>
-  <link rel="icon" type="image/png" href="Mavito azulito icon.png">
-  <style type="text/css">
-  @import url("design.css");
-  img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 60%;
+<html>
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mi sitio web</title>
+<link rel="icon" type="image/png" href="Mavito azulito icon.png">
+<!-- THIS IS THE CSS !-->
+<style type="text/css">
+    @import url("mystyle.css");
+* {
+  box-sizing: border-box;
 }
-  button {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  background-color: #FF2C72;
-  font-family: Helvetica;
-  border: 0px;
-}
-button:hover {
-    background-color: #111;
-  }
-#crearform {
-  font-family: Helvetica;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  border: 2px solid #0c356D;
-  background-color: #245ca3;
-  border-radius: 10px;
-  font-style: bold;
-  color:aliceblue;
-  width: fit-content;
-  padding: 10px;
-}
-input{
-  border-radius: 5px;
-  border: 0px;
-  padding: 8px 10px;
-}
-  </style>
-  </head>
-<body>
-  <div class="header">
-    <p>Proyecto: Mavito y Clavel</p>
-  </div>
-  <nav><ul> 
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="biblia.html" >Biblia de Animación</a></li>
-    <li><a  href="galeria.html" >Galería</a></li>
-    <li><a class="active" href="articulos.html" >Articulos</a></li>
-    <li><a href="proyecto.html" >Sobre el Proyecto</a></li> 
-  </ul></nav>
+#container {
+        max-width: 85%;
+        margin: 0 auto;/* this centers the entire page */
+    }
 
-<div class="spacebar"></div>
-<div class="page">
-  <h1 style="text-align: center;">Articulos</h1>
-	<p>Los articulos es donde referenciarán elementos inspirados o basados para el desarrollo de la historia. <br>
-  Aqui de debe poder editar solo por el usuario de la pagina. </p>
-  <br>
-  <button type="button" onclick="createpost()">¡Publicar!</button><br>
-  <!--Poner un Javascript para ocultar
-      Título del artículo
-      Cuerpo del artículo
-      Fecha de publicación
-      Autor del artículo
-      Imagen o fotografía
-      -->
-  <form id="crearform" action="crear.php" method="POST">
-    <label>Titulo*<br>
-    <input id="titulo" type="text" name="titulo" required></label><br><br>
-    <textarea id="descrip" name="descrip" rows="5" cols="40" placeholder="Cuenta lo que quieres decir" ></textarea><br><br>
-    <label>Autor: <input id="nom_autor" type="text" name="nom_autor" value="Montserrat Almodovar Ruvalcaba" style="width: 56%"></label>
-    <br><br>
-    <label>Insertar imagen
-      <!--How to allow <input type="file"> to accept only image files
-      Use the accept attribute of the input tag. To accept only PNG's, JPEG's and GIF's 
-      you can use the following code:-->
-    <input id="imagen" type="file" name="imagen" accept="image/png, image/gif, image/jpeg" /></label>
-    <br><br><br><input type="submit" value="Subir" style="color: azure; background-color: #1D8DC6; padding: 10px;"><br>
-  </form>
-  <br>
-  <button type="button">¡Editar!</button>
-  <br>
-  <button type="button">¡Borrar!</button>
-  <br>
-  <img src="images/image1.png" width="100%">
-</div>
-<div class="spacebar"></div>
-<footer>
-    <h3>@2025 Montserrat Almodovar Ruvalcaba</h3>
-</footer>
-<script>
-  //Hide and show an Element 
-  function createpost() {
-  var x = document.getElementById("crearform");
-  if (x.style.display === "none") {
-    x.style.display = "block";
-  } else {
-    x.style.display = "none";
+/* Style the body */
+body {
+  margin: 0;
+  color: #050620;
+  background-color: #293e43;
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 30%;
+  background-color: #1d8dc6;
+  padding: 20px;
+}
+
+/* Main column */
+.main {
+  flex: 70%;
+  background-color: #60CAE0;
+  padding: 20px;
+}
+.main h2 {
+    color: #ff2C72;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+footer {
+    background-color:  #0E1B2B;
+    padding: 20px;
+    text-align: center;
+    color: #fceaff;
+
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, .navbar {   
+    flex-direction: column;
   }
 }
-</script>
+</style>
+</head>
+<body>
+    <!-- Header -->
+    <div id="headerArea">
+        <header ><h1>Proyecto: Mavito y Clavel</h1></header>
+        <!-- Navigation Bar -->
+        <nav id="navbar">
+            <ul >
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="biblia.html" >Biblia de Animación</a></li>
+                <li><a href="galeria.html" >Galería</a></li>
+                <li><a class="active" href="articulos.html" >Articulos</a></li>
+                <li><a href="proyecto.html" >Sobre el Proyecto</a></li> 
+            </ul>
+        </nav>
+    </div>
+
+
+<!-- The flexible grid (content) -->
+<div id="container">
+<div class="row">
+  <div class="side">
+    <h2>Sobre el origen</h2>
+    <p>Las criaturas fueron concebidas por el artista mexicano <b>Pedro Linares López</b>. A los 30 años Pedro enfermó, lo que le provocó sueños febriles de criaturas extrañas, como burros alados y un gallo con cuerpo de rana. </p>
+    <img style="height:300px; display: block;margin-left: auto;margin-right: auto;" src="images/El sueño de linares.webp">
+    <p>En ese sueño, las criaturas cantaban la palabra "alebrijes" una y otra vez mientras dormía.</p></p>
+    <img style="width:200px; display: block;margin-left: auto;margin-right: auto;" src="images/Alebrijes 1.webp">
+    <p>Cuando despertó, Linares creó la primera escultura de un Alebrije y, desde entonces, los animales se han convertido en una gran representación del arte popular mexicano.</p>
+    <img style="height:200px; display: block;margin-left: auto;margin-right: auto;" src="images/Screen_Shot_2023-08-10_at_12.31.59_PM_480x480.webp">
+    <br><i>(Foto de Pedro trabajando en un Alebrije)</i>
+   <!--<h3>More Text</h3>--> 
+    <!-- <p>Lorem ipsum dolor sit ame.</p>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div><br>
+    <div class="fakeimg" style="height:60px;">Image</div>-->
+  </div>
+  <div class="main">
+    <h2>Sobre los alebrijes</h2>
+    <h5>¿Qué son los alebrijes?</h5>
+    <img style="height:200px; width: 100%;object-fit: cover;" src="images/la-flor-de-la-laguna-ajijic-mexico-4895.webp">
+    <p>Los alebrijes son criaturas mágicas que suelen estar hechas de cartón o papel maché. Sin embargo, hoy en día, muchos artesanos usan madera para tallar estas criaturas. Todos los alebrijes se elaboran con diferentes partes de animales; presentan rasgos exagerados y están pintados con colores vibrantes y patrones y diseños intrincados. Cada alebrije tiene características distintivas que los convierten en una obra de arte única. Por último, los alebrijes se utilizan a menudo en festivales y celebraciones.</p>
+    <p>Si has visto la película Coco de Disney, recordarás haberlos visto en el más allá. Sin embargo, en la película se dice que los alebrijes son "guías espirituales para el más allá", lo cual es inexacto.</p>
+    <p>Contrariamente a la creencia popular, los alebrijes fueron inventados en 1963 por un artesano mexicano de papel maché o cartonero llamado Pedro Linares.</p>
+    <p>Pedro era un hombre humilde que se ganaba la vida creando artesanías de papel maché, como piñatas y máscaras. Uno de sus productos más vendidos eran sus efigies de San Judas, utilizadas durante la Semana Santa para la tradición de la Quema de Judas.</p>
+    <h2>¿Cuál es el significado de los alebrijes?</h2>
+    <h5>Alebrijes, las figuras fantásticas más coloridas del arte ...</h5>
+    <img style="height:200px; width: 100%;object-fit: cover; object-position: 50% 65%;" src="images/IMG-1098-4__FocusFillWyIwLjAwIiwiMC4wMCIsMjAwMCw5NTBd.jpg">
+    <p>Al ser parte del arte tradicional mexicano, se cree que regalar un alebrije ayuda a "espantar" a los malos espíritus de los hogares, especialmente aquellos alebrijes con un aspecto más "monstruoso". Asimismo, estos se consideran como un símbolo de buena suerte.</p>
+    <h5>Conectar un significado</h5>
+    <p>En muchas pequeñas partes de América Latina, este evento ocurre en la víspera de Año Nuevo como símbolo de deshacerse del mal y comenzar el año con pureza. Algunas comunidades celebran este ritual quemando efigies de Judas, de ahí el nombre de "Quema del Judas".</p>
+    <p>Aunque no sea directametne su origen, se le podría atribuir con el hecho de su creador de haberse librado de su enfermedad gracias a estas creaturas guiandolo a despertarse, y de una manera librandose del mal. Esta libertad de creencias y especulaciones son lo que cultiva riqueza en la cultura de nuestras vidas, y compartirlas mediante el arte es inspirador.</p>
+  </div>
+</div>
+</div>
+<!-- Footer -->
+<footer>@2025 Montserrat Almodovar Ruvalcaba</footer>
+
 </body>
 </html>

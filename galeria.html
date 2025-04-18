@@ -6,153 +6,127 @@
   <title>Galería</title>
   <link rel="icon" type="image/png" href="Mavito azulito icon.png">
   <style type="text/css">
-  @import url("design.css");
+  @import url("mystyle.css"); 
+  header {
+        background-color: #5e4e8c;
+        background-attachment: fixed; 
+        background-image: var(--header-image);
+        background-size: cover; padding: 2%;
+        text-align: center;
+    }
+    header h1 { 
+        font-family: Mexicana; font-size: clamp(2.1rem, 5vw, 5rem) ; color: #0E1B2B; 
+        background-color: #9b61f3;
+        border: 3px solid #0E1B2B;
+        padding: 10px; justify-content: center; display: inline-block;
+        -webkit-text-stroke: 1px #43256E; margin:auto;
+    }
 
-  .gallery-container {
-  display: grid;
-  grid-template-columns: 7% 10%;
-  grid-template-rows: repeat(10, minmax(3rem, 8rem));
-  gap: 5px;
-  margin: 0 auto;
-  border-radius: 6px;
-  border: 3px solid #293e43;
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+* {
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display:flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  background-color: DodgerBlue;
   padding: 5px;
-  width:90%;
+  justify-content: space-between;
 }
 
-.gallery-item {
-  display: inline-block;
-  width: 100%;
-  height: 100%;
-  background: #1e1f26;
-  border-radius: 6px;
+.flex-container img {
+  margin: 5px;
+  height: 200px;
+  vertical-align: middle;
 }
 
-.one {
-  grid-column: 1 / 2;
-  grid-row: 1 / 3;
-}
-
-.two {
-  grid-column: 2 / 5;
-  grid-row: 1 / 3;
-}
-
-.three {
-  grid-column: 5;
-  grid-row: 1 / 3;
-}
-
-.four {
-  grid-column: 6;
-  grid-row: 1 / 3;
-}
-
-.five {
-  grid-column: 8 / 10;
-  grid-row: 1 / 3;
-}
-
-.six {
-  grid-column: 1 / 4;
-  grid-row: 3 / 5;
-}
-
-.seven {
-  grid-column: 4;
-  grid-row: 3 / 5;
-}
-
-.eight {
-  grid-column: 5;
-  grid-row: 3 / 5;
-}
-
-.nine {
-  grid-column: 6 / 10;
-  grid-row: 3 / 5;
-}
-
-.gallery-item img {
-  display: block;
-  border-radius: 5px;
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-  max-width: 100%;
-}
 
   </style>
-
-  </head>
+  </head> 
 <body>
-  <div class="header">
-    <p>Proyecto: Mavito y Clavel</p>
-  </div>
-  <nav><ul> 
-    <li><a href="index.html">Inicio</a></li>
-    <li><a href="biblia.html" >Biblia de Animación</a></li>
-    <li><a class="active" href="galeria.html" >Galería</a></li>
-    <li><a href="articulos.html" >Articulos</a></li>
-    <li><a href="proyecto.html" >Sobre el Proyecto</a></li> 
-  </ul></nav>
+    <div id="headerArea">
+        <header ><h1>Proyecto: Mavito y Clavel</h1></header>
+        <nav id="navbar">
+            <ul >
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="biblia.html" >Biblia de Animación</a></li>
+                <li><a class="active" href="galeria.html" >Galería</a></li>
+                <li><a href="articulos.html" >Articulos</a></li>
+                <li><a href="proyecto.html" >Sobre el Proyecto</a></li> 
+            </ul>
+        </nav>
+    </div>
+    <div id="container">
+    <main>
+     <h1>Bocetos principales</h1>   
+    </main>
 
-  <h1 style="text-align: center;">Galería destacada</h1>
-  <!-- Container for the image gallery -->
-  <div class="gallery-container">
+    <div class="flex-container">
+      <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5939a140-e582-4b41-a867-b5c4ac20855f/djbt969-4d29e6c6-cc15-4be3-aec4-a1a82648638d.png/v1/fill/w_938,h_654,q_80,strp/chido_mavito_flaming__by_blueberry_chick_djbt969-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjU0IiwicGF0aCI6IlwvZlwvNTkzOWExNDAtZTU4Mi00YjQxLWE4NjctYjVjNGFjMjA4NTVmXC9kamJ0OTY5LTRkMjllNmM2LWNjMTUtNGJlMy1hZWM0LWExYTgyNjQ4NjM4ZC5wbmciLCJ3aWR0aCI6Ijw9OTM4In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.viKuL5W9VllzLZKcPArZcwNfeoVHKs4kUQKs4GG9PzA" alt="">
+      <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5939a140-e582-4b41-a867-b5c4ac20855f/diost2h-90498fed-8f18-420b-81f5-7b37ffbcb737.png/v1/fit/w_408,h_430,q_70,strp/mavito_lovley_by_blueberry_chick_diost2h-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDMwIiwicGF0aCI6IlwvZlwvNTkzOWExNDAtZTU4Mi00YjQxLWE4NjctYjVjNGFjMjA4NTVmXC9kaW9zdDJoLTkwNDk4ZmVkLThmMTgtNDIwYi04MWY1LTdiMzdmZmJjYjczNy5wbmciLCJ3aWR0aCI6Ijw9NDA4In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.85h-cqPZEJCGR56Eoh2go6zlnOaZAku3ovi4bVbBJ8Y" alt="">
+      <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5939a140-e582-4b41-a867-b5c4ac20855f/diosrcs-90f00fb8-03fd-49f2-b210-b5bcc1d79bc5.jpg/v1/fill/w_1149,h_695,q_70,strp/primer_mavito_by_blueberry_chick_diosrcs-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Nzc1IiwicGF0aCI6IlwvZlwvNTkzOWExNDAtZTU4Mi00YjQxLWE4NjctYjVjNGFjMjA4NTVmXC9kaW9zcmNzLTkwZjAwZmI4LTAzZmQtNDlmMi1iMjEwLWI1YmNjMWQ3OWJjNS5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19._LO9_40wHuxQGziS9DtyejJ0oBZ1iJi59xHnqIA3tCo" alt="">
+      
   
-    <!-- Full-width images with number text -->
-    <div class="gallery-item one">
-        <img src="images/2022-ALEBRIJES__FocusFillWyIwLjAwIiwiMC4wMCIsMTIwMCw5MDBd.jpg" style="width:100%">
+      <img src="References/Bocetos_1.png">
+      <img src="References/Bocetos_2.png">
+      <img src="References/Bocetos_3.png">
+      <img src="References/Bocetos_4.png">
+
+      <img src="References/Bocetos_5.png">
+      <img src="References/Bocetos_6.png">
+      <img src="References/Bocetos_7.png">
+      <img src="References/Bocetos_8.png">
+
+      <img src="References/Bocetos_9.png">
+      <img src="References/Bocetos_10.png">
+      <img src="References/mavito_en_el_callejon_35_by_blueberry_chick_df2ky4a-375w-2x.jpg">
+      <img src="References/deyfr03-e1d1376f-db46-43df-8b74-34d6b5026701.png">
+      <img src="References/mavitos_carpeta_verde_by_blueberry_chick_diosuwd-fullview.jpg">
+      <img src="References/mavito_y_clavel_by_blueberry_chick_dj113iy-fullview.jpg">
+      
+      <main><br><br>
+        <p>Estos son algunos de los bocetos dibujados a lo largo de los años de haber concebido el personaje Mavito junto a otros personajes que lo acompañan.</p>
+      </main>
     </div>
-  
-    <div class="gallery-item two">
-        <img src="images/2022ALEBRIJES04-__FocusFillWyIwLjAwIiwiMC4wMCIsMTIwMCw5MDBd.jpg" style="width:100%">
+    
     </div>
-  
-    <div class="gallery-item three">
-        <img src="images/Alebrijes-Two-Headed-2__FocusFillWyIwLjAwIiwiMC4wMCIsMTIwMCw5MDBd.jpg" style="width:100%">
-    </div>
-  
-    <div class="gallery-item four">
-        <img src="images/D_NQ_NP_911850-MLM73711584451_122023-O.webp" style="width:100%">
-    </div>
-  
-    <div class="gallery-item five">
-        <img src="images/IMG-1098-4__FocusFillWyIwLjAwIiwiMC4wMCIsMjAwMCw5NTBd.jpg" style="width:100%">
-    </div>
-  
-    <div class="gallery-item six">
-        <img src="images/IMG-8175__FocusFillWyIwLjAwIiwiMC4wMCIsMTIwMCw5MDBd.jpg" style="width:100%">
-    </div>
+    <footer id="footer">@2025 Montserrat Almodovar Ruvalcaba</footer>
 
 
-  <div class="gallery-item seven">
-    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5939a140-e582-4b41-a867-b5c4ac20855f/djbt969-4d29e6c6-cc15-4be3-aec4-a1a82648638d.png/v1/fill/w_938,h_654,q_80,strp/chido_mavito_flaming__by_blueberry_chick_djbt969-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjU0IiwicGF0aCI6IlwvZlwvNTkzOWExNDAtZTU4Mi00YjQxLWE4NjctYjVjNGFjMjA4NTVmXC9kamJ0OTY5LTRkMjllNmM2LWNjMTUtNGJlMy1hZWM0LWExYTgyNjQ4NjM4ZC5wbmciLCJ3aWR0aCI6Ijw9OTM4In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.viKuL5W9VllzLZKcPArZcwNfeoVHKs4kUQKs4GG9PzA" alt="">
-    </div>
-    <div class="gallery-item eight">
-    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5939a140-e582-4b41-a867-b5c4ac20855f/diost2h-90498fed-8f18-420b-81f5-7b37ffbcb737.png/v1/fit/w_408,h_430,q_70,strp/mavito_lovley_by_blueberry_chick_diost2h-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDMwIiwicGF0aCI6IlwvZlwvNTkzOWExNDAtZTU4Mi00YjQxLWE4NjctYjVjNGFjMjA4NTVmXC9kaW9zdDJoLTkwNDk4ZmVkLThmMTgtNDIwYi04MWY1LTdiMzdmZmJjYjczNy5wbmciLCJ3aWR0aCI6Ijw9NDA4In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.85h-cqPZEJCGR56Eoh2go6zlnOaZAku3ovi4bVbBJ8Y" alt="">
-    </div>
-    <div class="gallery-item nine">
-    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5939a140-e582-4b41-a867-b5c4ac20855f/diosrcs-90f00fb8-03fd-49f2-b210-b5bcc1d79bc5.jpg/v1/fill/w_1149,h_695,q_70,strp/primer_mavito_by_blueberry_chick_diosrcs-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Nzc1IiwicGF0aCI6IlwvZlwvNTkzOWExNDAtZTU4Mi00YjQxLWE4NjctYjVjNGFjMjA4NTVmXC9kaW9zcmNzLTkwZjAwZmI4LTAzZmQtNDlmMi1iMjEwLWI1YmNjMWQ3OWJjNS5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19._LO9_40wHuxQGziS9DtyejJ0oBZ1iJi59xHnqIA3tCo" alt="">
-    </div>
-  </div>
-    <!-- Image text 
-    <div class="caption-container">
-      <p id="caption"></p>
-    </div>-->
-  
+    <script>
+      $(document).ready(function() {
+	$('.zoom-gallery').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeOnContentClick: false,
+		closeBtnInside: false,
+		mainClass: 'mfp-with-zoom mfp-img-mobile',
 
+		// If you enable allowHTMLInTemplate - 
+		// make sure your HTML attributes are sanitized if they can be created by a non-admin user
+		allowHTMLInTemplate: true,
+		image: {
+			verticalFit: true,
+			titleSrc: function(item) {
+				return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+			}
+		},
 
-
-<div class="spacebar"></div>
-<footer>
-    <h3>@2025 Montserrat Almodovar Ruvalcaba</h3>
-</footer>
-
-<script>
-
-  </script>
-
+		gallery: {
+			enabled: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300, // don't foget to change the duration also in CSS
+			opener: function(element) {
+				return element.find('img');
+			}
+		}
+		
+	});
+});
+    </script>
 </body>
 </html>
