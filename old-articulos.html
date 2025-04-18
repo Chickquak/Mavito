@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset=“utf-8”>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Articulos</title>
+  <link rel="icon" type="image/png" href="Mavito azulito icon.png">
+  <style type="text/css">
+  @import url("design.css");
+  img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+  button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  background-color: #FF2C72;
+  font-family: Helvetica;
+  border: 0px;
+}
+button:hover {
+    background-color: #111;
+  }
+#crearform {
+  font-family: Helvetica;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  border: 2px solid #0c356D;
+  background-color: #245ca3;
+  border-radius: 10px;
+  font-style: bold;
+  color:aliceblue;
+  width: fit-content;
+  padding: 10px;
+}
+input{
+  border-radius: 5px;
+  border: 0px;
+  padding: 8px 10px;
+}
+  </style>
+  </head>
+<body>
+  <div class="header">
+    <p>Proyecto: Mavito y Clavel</p>
+  </div>
+  <nav><ul> 
+    <li><a href="index.html">Inicio</a></li>
+    <li><a href="biblia.html" >Biblia de Animación</a></li>
+    <li><a  href="galeria.html" >Galería</a></li>
+    <li><a class="active" href="articulos.html" >Articulos</a></li>
+    <li><a href="proyecto.html" >Sobre el Proyecto</a></li> 
+  </ul></nav>
+
+<div class="spacebar"></div>
+<div class="page">
+  <h1 style="text-align: center;">Articulos</h1>
+	<p>Los articulos es donde referenciarán elementos inspirados o basados para el desarrollo de la historia. <br>
+  Aqui de debe poder editar solo por el usuario de la pagina. </p>
+  <br>
+  <button type="button" onclick="createpost()">¡Publicar!</button><br>
+  <!--Poner un Javascript para ocultar
+      Título del artículo
+      Cuerpo del artículo
+      Fecha de publicación
+      Autor del artículo
+      Imagen o fotografía
+      -->
+  <form id="crearform" action="crear.php" method="POST">
+    <label>Titulo*<br>
+    <input id="titulo" type="text" name="titulo" required></label><br><br>
+    <textarea id="descrip" name="descrip" rows="5" cols="40" placeholder="Cuenta lo que quieres decir" ></textarea><br><br>
+    <label>Autor: <input id="nom_autor" type="text" name="nom_autor" value="Montserrat Almodovar Ruvalcaba" style="width: 56%"></label>
+    <br><br>
+    <label>Insertar imagen
+      <!--How to allow <input type="file"> to accept only image files
+      Use the accept attribute of the input tag. To accept only PNG's, JPEG's and GIF's 
+      you can use the following code:-->
+    <input id="imagen" type="file" name="imagen" accept="image/png, image/gif, image/jpeg" /></label>
+    <br><br><br><input type="submit" value="Subir" style="color: azure; background-color: #1D8DC6; padding: 10px;"><br>
+  </form>
+  <br>
+  <button type="button">¡Editar!</button>
+  <br>
+  <button type="button">¡Borrar!</button>
+  <br>
+  <img src="images/image1.png" width="100%">
+</div>
+
+<div class="page">
+  <h1 >Sobre los alebrijes</h1>
+  <p class="italic small">¿Qué son los alebrijes?</p><br>
+  
+  <h3 style= "font-family: Helvetica"; >Origen de la idea</h3>
+  
+  
+  <button onclick="document.getElementById('myImage').src='Luz/Mavito_Icon.png'">Encender la luz</button>
+  
+  <br><img class="img" id="myImage" src="Luz/Mavito_apagado.png" style="width:100px"><br>
+  
+  <button onclick="document.getElementById('myImage').src='Luz/Mavito_apagado.png'">Apagar la luz</button>
+  
+      <p>Las criaturas fueron inventadas en la década de 1940 por el artista mexicano Pedro Linares López, quien soñaba con criaturas multicolores que encarnaban diferentes partes del cuerpo de animales y cantaba “Alebrije” una y otra vez en su sueño. Cuando despertó, Linares creó la primera escultura de un Alebrije y, desde entonces, los animales se han convertido en una gran representación del arte popular mexicano.
+      </p>
+      <img class="img" src="images/IMG-8175__FocusFillWyIwLjAwIiwiMC4wMCIsMTIwMCw5MDBd.jpg"> <br>
+  
+  <div class="clearfix">
+  <p class="italic small">¿Cuál es el significado de los alebrijes? </p><br><img class="img1" src="images/D_NQ_NP_911850-MLM73711584451_122023-O.webp" width="25%"> 
+    <p>
+    Alebrijes, las figuras fantásticas más coloridas del arte ...<br>
+    Al ser parte del arte tradicional mexicano, se cree que regalar un alebrije ayuda a "espantar" a los malos espíritus de los hogares, especialmente aquellos alebrijes con un aspecto más "monstruoso". Asimismo, estos se consideran como un símbolo de buena suerte.
+    </p>
+  </div>
+  
+  
+        
+  </div>
+<div class="spacebar"></div>
+<footer>
+    <h3>@2025 Montserrat Almodovar Ruvalcaba</h3>
+</footer>
+<script>
+  //Hide and show an Element 
+  function createpost() {
+  var x = document.getElementById("crearform");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>
