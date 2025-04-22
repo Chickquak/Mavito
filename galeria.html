@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Galería</title>
   <link rel="icon" type="image/png" href="Mavito azulito icon.png">
+  <link rel="stylesheet" href="magnific-popup/magnific-popup.css">
   <style type="text/css">
   @import url("mystyle.css"); 
   header {
@@ -41,7 +42,33 @@
   height: 200px;
   vertical-align: middle;
 }
+/*********************************************/
+.image-source-link {
+	color: #98C3D1;
+}
 
+.mfp-with-zoom .mfp-container,
+.mfp-with-zoom.mfp-bg {
+	opacity: 0;
+	-webkit-backface-visibility: hidden;
+	/* ideally, transition speed should match zoom duration */
+	-webkit-transition: all 0.3s ease-out; 
+	-moz-transition: all 0.3s ease-out; 
+	-o-transition: all 0.3s ease-out; 
+	transition: all 0.3s ease-out;
+}
+
+.mfp-with-zoom.mfp-ready .mfp-container {
+		opacity: 1;
+}
+.mfp-with-zoom.mfp-ready.mfp-bg {
+		opacity: 0.8;
+}
+
+.mfp-with-zoom.mfp-removing .mfp-container, 
+.mfp-with-zoom.mfp-removing.mfp-bg {
+	opacity: 0;
+}
 
   </style>
   </head> 
@@ -63,13 +90,18 @@
      <h1>Bocetos principales</h1>   
     </main>
 
-    <div class="flex-container">
+    <div class="flex-container zoom-gallery">
       <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5939a140-e582-4b41-a867-b5c4ac20855f/djbt969-4d29e6c6-cc15-4be3-aec4-a1a82648638d.png/v1/fill/w_938,h_654,q_80,strp/chido_mavito_flaming__by_blueberry_chick_djbt969-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjU0IiwicGF0aCI6IlwvZlwvNTkzOWExNDAtZTU4Mi00YjQxLWE4NjctYjVjNGFjMjA4NTVmXC9kamJ0OTY5LTRkMjllNmM2LWNjMTUtNGJlMy1hZWM0LWExYTgyNjQ4NjM4ZC5wbmciLCJ3aWR0aCI6Ijw9OTM4In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.viKuL5W9VllzLZKcPArZcwNfeoVHKs4kUQKs4GG9PzA" alt="">
       <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5939a140-e582-4b41-a867-b5c4ac20855f/diost2h-90498fed-8f18-420b-81f5-7b37ffbcb737.png/v1/fit/w_408,h_430,q_70,strp/mavito_lovley_by_blueberry_chick_diost2h-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDMwIiwicGF0aCI6IlwvZlwvNTkzOWExNDAtZTU4Mi00YjQxLWE4NjctYjVjNGFjMjA4NTVmXC9kaW9zdDJoLTkwNDk4ZmVkLThmMTgtNDIwYi04MWY1LTdiMzdmZmJjYjczNy5wbmciLCJ3aWR0aCI6Ijw9NDA4In1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.85h-cqPZEJCGR56Eoh2go6zlnOaZAku3ovi4bVbBJ8Y" alt="">
       <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/5939a140-e582-4b41-a867-b5c4ac20855f/diosrcs-90f00fb8-03fd-49f2-b210-b5bcc1d79bc5.jpg/v1/fill/w_1149,h_695,q_70,strp/primer_mavito_by_blueberry_chick_diosrcs-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9Nzc1IiwicGF0aCI6IlwvZlwvNTkzOWExNDAtZTU4Mi00YjQxLWE4NjctYjVjNGFjMjA4NTVmXC9kaW9zcmNzLTkwZjAwZmI4LTAzZmQtNDlmMi1iMjEwLWI1YmNjMWQ3OWJjNS5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19._LO9_40wHuxQGziS9DtyejJ0oBZ1iJi59xHnqIA3tCo" alt="">
       
-  
-      <img src="References/Bocetos_1.png">
+      <a href="http://farm4.staticflickr.com/3763/9204547649_0472680945_o.jpg" data-source="http://500px.com/photo/32736307" title="Into The Blue">
+        <img src="http://farm4.staticflickr.com/3763/9204547649_7de96ee188_t.jpg" >
+      </a>
+      
+      <a href="References/Bocetos_1.png" data-source="galeria.html" title="Into The Blue">
+        <img src="References/Bocetos_1.png">
+      </a>
       <img src="References/Bocetos_2.png">
       <img src="References/Bocetos_3.png">
       <img src="References/Bocetos_4.png">
@@ -90,11 +122,32 @@
         <p>Estos son algunos de los bocetos dibujados a lo largo de los años de haber concebido el personaje Mavito junto a otros personajes que lo acompañan.</p>
       </main>
     </div>
+
+
+    
+      <div class="zoom-gallery">
+        <!--
+        Width/height ratio of thumbnail and the main image must match to avoid glitches.
+      
+        If ratios are different, you may add CSS3 opacity transition to the main image to make the change less noticable.
+         -->
+        <a href="http://farm4.staticflickr.com/3763/9204547649_0472680945_o.jpg" data-source="http://500px.com/photo/32736307" title="Into The Blue" style="width:193px;height:125px;">
+          <img src="http://farm4.staticflickr.com/3763/9204547649_7de96ee188_t.jpg" width="193" height="125">
+        </a>
+        <a href="http://farm3.staticflickr.com/2856/9207329420_7f2a668b06_o.jpg" data-source="http://500px.com/photo/32554131" title="Light Sabre" style="width:82px;height:125px;">
+          <img src="http://farm3.staticflickr.com/2856/9207329420_e485948b01_t.jpg" width="82px" height="125">
+        </a>
+      </div>
+    
     
     </div>
     <footer id="footer">@2025 Montserrat Almodovar Ruvalcaba</footer>
 
+<!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
+<!-- Magnific Popup core JS file -->
+<script src="magnific-popup/jquery.magnific-popup.js"></script>
     <script>
       $(document).ready(function() {
 	$('.zoom-gallery').magnificPopup({
